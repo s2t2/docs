@@ -784,13 +784,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <h2 id="hail-caesar"><a class="link" href="#hail-caesar">Hail, Caesar!</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Recall from David DiCiurcio&#8217;s short that Caesar&#8217;s cipher encrypts (i.e., scrambles in a reversible way) messages by "rotating" each letter by <em>k</em> positions, wrapping around from <code>Z</code> to <code>A</code> as needed<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>. In other words, if <em>p</em> is some plaintext (i.e., an unencrypted message), <em>p<sub>i</sub></em> is the <em>i<sup>th</sup></em> character in <em>p</em>, and <em>k</em> is a secret key (i.e., a non-negative integer), then each letter, <em>c<sub>i</sub></em>, in the ciphertext, <em>c</em>, is computed as:</p>
+<p>Recall from David DiCiurcio&#8217;s short that Caesar&#8217;s cipher encrypts (i.e., scrambles in a reversible way) messages by "rotating" each letter by <em>k</em> positions, wrapping around from <code>Z</code> to <code>A</code> as needed<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. In other words, if <em>p</em> is some plaintext (i.e., an unencrypted message), <em>p<sub>i</sub></em> is the <em>i<sup>th</sup></em> character in <em>p</em>, and <em>k</em> is a secret key (i.e., a non-negative integer), then each letter, <em>c<sub>i</sub></em>, in the ciphertext, <em>c</em>, is computed as:</p>
 </div>
 <div class="paragraph">
 <p><em>c<sub>i</sub></em> = (<em>p<sub>i</sub></em> + <em>k</em>) % 26</p>
 </div>
 <div class="paragraph">
-<p>This formula perhaps makes the cipher seem more complicated than it is, but it&#8217;s really just a nice way of expressing the algorithm precisely and concisely. And computer scientists love precision and, er, concision.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></p>
+<p>This formula perhaps makes the cipher seem more complicated than it is, but it&#8217;s really just a nice way of expressing the algorithm precisely and concisely. And computer scientists love precision and, er, concision.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>For example, suppose that the secret key, <em>k</em>, is 13 and that the plaintext, <em>p</em>, is "Be sure to drink your Ovaltine!"  Let&#8217;s encrypt that <em>p</em> with that <em>k</em> in order to get the ciphertext, <em>c</em>, by rotating each of the letters in <em>p</em> by 13 places, whereby:</p>
@@ -975,10 +975,10 @@ Or fher gb qevax lbhe Binygvar!</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. See <a href="http://en.wikipedia.org/wiki/Caesar_cipher" class="bare">http://en.wikipedia.org/wiki/Caesar_cipher</a>
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. And, er, parallelism.
 </div>
 </div>

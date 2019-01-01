@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -591,32 +591,32 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#downloading">Downloading</a></li>
 <li><a href="#understanding">Understanding</a>
 <ul class="sectlevel3">
-<li><a href="#code-compare-code"><code>compare</code></a></li>
+<li><a href="#compare"><code>compare</code></a></li>
 </ul>
 </li>
-<li><a href="#code-helpers-py-code"><code>helpers.py</code></a></li>
-<li><a href="#code-application-py-code"><code>application.py</code></a></li>
-<li><a href="#code-templates-layout-html-code"><code>templates/layout.html</code></a></li>
-<li><a href="#code-templates-index-html-code"><code>templates/index.html</code></a></li>
-<li><a href="#code-templates-compare-html-code"><code>templates/compare.html</code></a></li>
-<li><a href="#code-templates-error-html-code"><code>templates/error.html</code></a></li>
-<li><a href="#code-static-styles-css-code"><code>static/styles.css</code></a>
+<li><a href="#helpers-py"><code>helpers.py</code></a></li>
+<li><a href="#application-py"><code>application.py</code></a></li>
+<li><a href="#templateslayout-html"><code>templates/layout.html</code></a></li>
+<li><a href="#templatesindex-html"><code>templates/index.html</code></a></li>
+<li><a href="#templatescompare-html"><code>templates/compare.html</code></a></li>
+<li><a href="#templateserror-html"><code>templates/error.html</code></a></li>
+<li><a href="#staticstyles-css"><code>static/styles.css</code></a>
 <ul class="sectlevel3">
-<li><a href="#code-requirements-txt-code"><code>requirements.txt</code></a></li>
+<li><a href="#requirements-txt"><code>requirements.txt</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#specification">Specification</a>
 <ul class="sectlevel2">
-<li><a href="#code-helpers-py-code-2"><code>helpers.py</code></a>
+<li><a href="#helpers-py-2"><code>helpers.py</code></a>
 <ul class="sectlevel3">
-<li><a href="#code-lines-code"><code>lines</code></a></li>
-<li><a href="#code-sentences-code"><code>sentences</code></a></li>
-<li><a href="#code-substrings-code"><code>substrings</code></a></li>
+<li><a href="#lines"><code>lines</code></a></li>
+<li><a href="#sentences"><code>sentences</code></a></li>
+<li><a href="#substrings"><code>substrings</code></a></li>
 </ul>
 </li>
-<li><a href="#code-templates-index-html-code-2"><code>templates/index.html</code></a></li>
+<li><a href="#templatesindex-html-2"><code>templates/index.html</code></a></li>
 </ul>
 </li>
 <li><a href="#walkthroughs">Walkthroughs</a></li>
@@ -626,7 +626,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#style">Style</a></li>
 </ul>
 </li>
-<li><a href="#staff-s-solution">Staff&#8217;s Solution</a>
+<li><a href="#staffs-solution">Staff&#8217;s Solution</a>
 <ul class="sectlevel2">
 <li><a href="#cli">CLI</a></li>
 <li><a href="#web">Web</a></li>
@@ -645,7 +645,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Similarities</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -825,7 +825,7 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 <div class="sect2">
 <h3 id="understanding"><a class="link" href="#understanding">Understanding</a></h3>
 <div class="sect3">
-<h4 id="code-compare-code"><a class="link" href="#code-compare-code"><code>compare</code></a></h4>
+<h4 id="compare"><a class="link" href="#compare"><code>compare</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>compare</code>. Suffice it to say that file&#8217;s name doesn&#8217;t end in <code>.py</code>, even though the file contains a program written in Python. But that&#8217;s okay! Notice the "shebang" atop the file:</p>
 </div>
@@ -846,13 +846,13 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-helpers-py-code"><a class="link" href="#code-helpers-py-code"><code>helpers.py</code></a></h3>
+<h3 id="helpers-py"><a class="link" href="#helpers-py"><code>helpers.py</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>helpers.py</code>. Ah, the familiar <code>TODO</code>. Declared in this file are three functions, each of which is meant to implement a different algorithm: <code>lines</code>, <code>sentences</code>, and <code>substrings</code>. At the moment, each of them returns an empty list. But not for long!</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-application-py-code"><a class="link" href="#code-application-py-code"><code>application.py</code></a></h3>
+<h3 id="application-py"><a class="link" href="#application-py"><code>application.py</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>application.py</code>. This file implements a web application that, ultimately, will allow you to run any of those three algorithms on any two text files. No need to understand the entirety of this file, particularly <code>highlight</code> and <code>errorhandler</code>. But know that <code>highlight</code>, given a string, <code>s</code>, and a list of other strings, <code>strings</code>, highlights (by wrapping them in HTML <code>span</code> tags) all instances of the former in the latter. And <code>errorhandler</code> ensures that any HTTP errors are displayed on a page of their own.</p>
 </div>
@@ -861,13 +861,13 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-templates-layout-html-code"><a class="link" href="#code-templates-layout-html-code"><code>templates/layout.html</code></a></h3>
+<h3 id="templateslayout-html"><a class="link" href="#templateslayout-html"><code>templates/layout.html</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>templates/layout.html</code>. In this file is a template for the web application&#8217;s overall layout. Odds are you&#8217;ll recognize a few of the HTML tags therein and notice a few new ones. Notice, in particular, how the template uses Bootstrap, a popular library. In fact, we based this template on their own <a href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">starter template</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-templates-index-html-code"><a class="link" href="#code-templates-index-html-code"><code>templates/index.html</code></a></h3>
+<h3 id="templatesindex-html"><a class="link" href="#templatesindex-html"><code>templates/index.html</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>templates/index.html</code>. Ah, the final <code>TODO</code>. Notice how this template "extends" <code>layout.html</code>, which is to say that <code>layout.html</code> is the "mold" from which <code>index.html</code> itself will be made. The <code>block</code> defined in <code>index.html</code> will effectively get plugged into the placeholder for <code>block</code> in <code>layout.html</code>.</p>
 </div>
@@ -876,24 +876,24 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-templates-compare-html-code"><a class="link" href="#code-templates-compare-html-code"><code>templates/compare.html</code></a></h3>
+<h3 id="templatescompare-html"><a class="link" href="#templatescompare-html"><code>templates/compare.html</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>templates/compare.html</code>. We took the liberty of implementing this file for you. Thanks to its use of some CSS (particularly a class called <code>col-6</code>), it ensures that users' files, once uploaded and highlighted, will be displayed side by side.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-templates-error-html-code"><a class="link" href="#code-templates-error-html-code"><code>templates/error.html</code></a></h3>
+<h3 id="templateserror-html"><a class="link" href="#templateserror-html"><code>templates/error.html</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>templates/error.html</code>. In this file is a template with which any HTTP errors will be displayed. It happens to use Bootstrap&#8217;s <a href="https://getbootstrap.com/docs/4.0/components/jumbotron/">Jumbotron</a> feature.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-static-styles-css-code"><a class="link" href="#code-static-styles-css-code"><code>static/styles.css</code></a></h3>
+<h3 id="staticstyles-css"><a class="link" href="#staticstyles-css"><code>static/styles.css</code></a></h3>
 <div class="paragraph">
 <p>Open up <code>static/styles.css</code>. In this file are some CSS properties that collectively implement your web application&#8217;s user interface. Essentially, they modify some of Bootstrap&#8217;s own defaults.</p>
 </div>
 <div class="sect3">
-<h4 id="code-requirements-txt-code"><a class="link" href="#code-requirements-txt-code"><code>requirements.txt</code></a></h4>
+<h4 id="requirements-txt"><a class="link" href="#requirements-txt"><code>requirements.txt</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>requirements.txt</code> (without changing it, though you can later if you&#8217;d like). This file specifies the libraries, one per line, on which all of this functionality depends.</p>
 </div>
@@ -905,15 +905,15 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="code-helpers-py-code-2"><a class="link" href="#code-helpers-py-code-2"><code>helpers.py</code></a></h3>
+<h3 id="helpers-py-2"><a class="link" href="#helpers-py-2"><code>helpers.py</code></a></h3>
 <div class="sect3">
-<h4 id="code-lines-code"><a class="link" href="#code-lines-code"><code>lines</code></a></h4>
+<h4 id="lines"><a class="link" href="#lines"><code>lines</code></a></h4>
 <div class="paragraph">
 <p>Implement <code>lines</code> in such a way that, given two strings, <code>a</code> and <code>b</code>, it returns a <code>list</code> of the lines that are, identically, in both <code>a</code> and <code>b</code>. The <code>list</code> should not contain any duplicates. Assume that lines in <code>a</code> and <code>b</code> will be be separated by <code>\n</code>, but the strings in the returned <code>list</code> should not end in <code>\n</code>. If both <code>a</code> and <code>b</code> contain one or more blank lines (i.e., a <code>\n</code> immediately preceded by no other characters), the returned <code>list</code> should include an empty string (i.e., <code>""</code>).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-sentences-code"><a class="link" href="#code-sentences-code"><code>sentences</code></a></h4>
+<h4 id="sentences"><a class="link" href="#sentences"><code>sentences</code></a></h4>
 <div class="paragraph">
 <p>Implement <code>sentences</code> in such a way that, given two strings, <code>a</code> and <code>b</code>, it returns a <code>list</code> of the <em>unique</em> English sentences that are, identically, present in both <code>a</code> and <code>b</code>. The <code>list</code> should not contain any duplicates. Use <code>sent_tokenize</code> from the Natural Language Toolkit to "tokenize" (i.e., separate) each string into a <code>list</code> of sentences. It can be imported with:</p>
 </div>
@@ -927,7 +927,7 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-substrings-code"><a class="link" href="#code-substrings-code"><code>substrings</code></a></h4>
+<h4 id="substrings"><a class="link" href="#substrings"><code>substrings</code></a></h4>
 <div class="paragraph">
 <p>Implement <code>substrings</code> in such a way that, given two strings, <code>a</code> and <code>b</code>, and an integer, <code>n</code>, it returns a <code>list</code> of all substrings of length <code>n</code> that are, identically, present in both <code>a</code> and <code>b</code>. The <code>list</code> should not contain any duplicates.</p>
 </div>
@@ -937,7 +937,7 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-templates-index-html-code-2"><a class="link" href="#code-templates-index-html-code-2"><code>templates/index.html</code></a></h3>
+<h3 id="templatesindex-html-2"><a class="link" href="#templatesindex-html-2"><code>templates/index.html</code></a></h3>
 <div class="paragraph">
 <p>Implement <code>templates/index.html</code> in such a way that it contains an HTML form via which a user can submit:</p>
 </div>
@@ -1021,7 +1021,7 @@ application.py  compare* helpers.py  requirements.txt  static/  templates/</code
 </div>
 </div>
 <div class="sect1">
-<h2 id="staff-s-solution"><a class="link" href="#staff-s-solution">Staff&#8217;s Solution</a></h2>
+<h2 id="staffs-solution"><a class="link" href="#staffs-solution">Staff&#8217;s Solution</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="cli"><a class="link" href="#cli">CLI</a></h3>

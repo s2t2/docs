@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -587,7 +587,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#assessment">Assessment</a></li>
 <li><a href="#getting-ready">Getting Ready</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#story-time-sup-class-footnote-a-id-_footnoteref_1-class-footnote-href-_footnote_1-title-view-footnote-1-a-sup">Story Time!<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></a></li>
+<li><a href="#story-time1">Story Time!<sup class="footnote">[1]</sup></a></li>
 <li><a href="#puff-me-up">Puff Me Up!</a></li>
 <li><a href="#huff-huff-and-away">Huff, Huff, and Away!</a></li>
 <li><a href="#what-to-do">What To Do</a></li>
@@ -597,7 +597,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Huff</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement Huffman compression, per the below</p>
@@ -893,7 +893,7 @@ node;</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="story-time-sup-class-footnote-a-id-_footnoteref_1-class-footnote-href-_footnote_1-title-view-footnote-1-a-sup"><a class="link" href="#story-time-sup-class-footnote-a-id-_footnoteref_1-class-footnote-href-_footnote_1-title-view-footnote-1-a-sup">Story Time!<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></a></h2>
+<h2 id="story-time1"><a class="link" href="#story-time1">Story Time!<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>Once upon a time when pigs spoke rhyme</em></p>
@@ -1079,7 +1079,7 @@ node;</code></pre>
 <p>Open up <code>huffile.h</code> and spend some time looking over the code and comments therein. This file defines a "layer of abstraction" for you in order to facilitate your implementation of <code>huff</code> (and our implementation of <code>puff</code>). More technically, it defines an API (application programming interface) with which you can read (or write) Huffman-compressed files.</p>
 </div>
 <div class="paragraph">
-<p>Ultimately, this problem set is as much about learning how to interface with someone else&#8217;s code (e.g., ours) as it is about building and traversing binary trees. After all, after CS50, you won&#8217;t always have someone to walk you through code. But what once looked like Greek should at least now look like C to you!<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+<p>Ultimately, this problem set is as much about learning how to interface with someone else&#8217;s code (e.g., ours) as it is about building and traversing binary trees. After all, after CS50, you won&#8217;t always have someone to walk you through code. But what once looked like Greek should at least now look like C to you!<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Notice that, in <code>huffile.h</code>, we have defined the following <code>struct</code> to wrap all our metadata.</p>
@@ -1099,7 +1099,7 @@ node;</code></pre>
 <p>As its own name suggests (say it three times fast), this <code>struct</code> defines a header for a Huffman-compressed file (much like <code>BITMAPFILEHEADER</code> defined a header for BMPs). Before writing out bits (i.e., codes), our implementation of <code>huff</code> first writes out this header, so that your version of <code>puff</code> can read in the same and reconstruct the tree we used for huffing.</p>
 </div>
 <div class="paragraph">
-<p>Besides symbols' frequencies, notice that this header includes some magic! Much like JPEGs being with <code>0xffd8</code>, so have we decided (arbitrarily) that <code>huff</code>-compressed files must begin with <code>0x46465548</code>.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup> A "magic number," then, is a form of signature. We have also decided that huffed files' headers must end with a "checksum," a summation of all frequencies therein.</p>
+<p>Besides symbols' frequencies, notice that this header includes some magic! Much like JPEGs being with <code>0xffd8</code>, so have we decided (arbitrarily) that <code>huff</code>-compressed files must begin with <code>0x46465548</code>.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> A "magic number," then, is a form of signature. We have also decided that huffed files' headers must end with a "checksum," a summation of all frequencies therein.</p>
 </div>
 <div class="paragraph">
 <p>In other words, if, upon reading some file&#8217;s first several bytes into a <code>Huffeader</code>, <code>magic</code> is not <code>0x46465548</code> or <code>checksum</code> does not equal the sum of all values in <code>frequencies</code>, then the file was most certainly not huffed!footnote:[Of course, some non-huffed file&#8217;s first several bytes might happen to satisfy these conditions as well, in which case it could be mistaken for a huffed file. Probabilistically, that&#8217;s not too likely to happen. But it&#8217;s because of that chance that some operating systems (also) rely on files' extensions (e.g., <code>.bmp</code>) to distinguish files' types.</p>
@@ -1202,7 +1202,7 @@ $<span class="tok-s2"> 0	0 0	&lt; 0	H 2	T 1	` 0	l 0	x 0</span>
 <p>A final stroll through some code, if we may. Recall that, to implement Huffman&#8217;s algorithm, you can begin with a "forest" of single-node trees, each of which represents a symbol and its frequency within some body of text. Iteratively can you then pick from that forest the two trees with lowest frequencies, join them as siblings with a new parents whose own frequency is the sum of its children&#8217;s, and plant that new parent in the forest. In time will this forest converge to a lone tree whose branches represent symbols' codes.</p>
 </div>
 <div class="paragraph">
-<p>Also recall that the manner in which ties between roots with equal frequencies are broken is important to standardize, lest <code>huff</code> and <code>puff</code> build different trees. And so we have provided you not only with an API for reading (or writing) <code>Huffile</code>s but also with an API for forest management.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup> Take a look first at <code>tree.h</code>. Notice that we have provided the following definition for trees' nodes.</p>
+<p>Also recall that the manner in which ties between roots with equal frequencies are broken is important to standardize, lest <code>huff</code> and <code>puff</code> build different trees. And so we have provided you not only with an API for reading (or writing) <code>Huffile</code>s but also with an API for forest management.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> Take a look first at <code>tree.h</code>. Notice that we have provided the following definition for trees' nodes.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1220,7 +1220,7 @@ $<span class="tok-s2"> 0	0 0	&lt; 0	H 2	T 1	` 0	l 0	x 0</span>
 <p>Rather than store symbols' frequencies as percentages (i.e., floating point values), a node, per this definition, instead stores raw counts.</p>
 </div>
 <div class="paragraph">
-<p>As the design of <code>tree.h</code> suggests, rather than ever <code>malloc</code> a <code>Tree</code> yourself, you should instead call <code>mktree</code>, which will not only <code>malloc</code> a <code>Tree</code> for you but also initialize its members to defaults. Similarly should you never call <code>free</code> on a <code>Tree</code> but, instead, invoke <code>rmtree</code>, which will delete that <code>Tree</code>'s root for you plus all its descendants.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnote_4" title="View footnote.">4</a>]</sup></p>
+<p>As the design of <code>tree.h</code> suggests, rather than ever <code>malloc</code> a <code>Tree</code> yourself, you should instead call <code>mktree</code>, which will not only <code>malloc</code> a <code>Tree</code> for you but also initialize its members to defaults. Similarly should you never call <code>free</code> on a <code>Tree</code> but, instead, invoke <code>rmtree</code>, which will delete that <code>Tree</code>'s root for you plus all its descendants.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Now take a look at <code>forest.h</code>. This API happens to implement a <code>Forest</code> as a linked list of <code>Plot</code>s, each of which houses a <code>Tree</code>. But you need not worry about such details, as we have abstracted them away for the sake of simplicity (and standardization). Rather than ever <code>malloc</code> or <code>free</code> a <code>Forest</code> yourself, you should instead, much like for <code>Tree</code>s, call <code>mkforest</code> or <code>reforest</code>, respectively. Moreover, rather than ever touch a <code>Forest&#8217;s linked list, you should instead add `Tree</code>s to a <code>Forest</code> with <code>plant</code> and remove <code>Tree</code>s from a <code>Forest</code> with <code>pick</code>. Note that this API does not build Huffman&#8217;s tree for you! Rather, it maintains <code>Tree</code>s that you yourself have planted in sorted order so that you can pick those same <code>Tree</code>s in order of increasing frequency, with the API (and not you) breaking ties when necessary.</p>
@@ -1308,19 +1308,19 @@ $<span class="tok-s2"> 0	0 0	&lt; 0	H 2	T 1	` 0	l 0	x 0</span>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. You, uh&#8230;&#8203; can skip this section if you want.
 </div>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. Unless you actually speak Greek.
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. We say "arbitrarily", but <code>0x46465548</code> actually has meaning. What does it spell?
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. Speaking of forest management, did you know that Harvard owns a forest? Procrastinate at <a href="http://harvardforest.fas.harvard.edu/" class="bare">http://harvardforest.fas.harvard.edu/</a>
 </div>
-<div class="footnote" id="_footnote_4">
+<div class="footnote" id="_footnotedef_4">
 <a href="#_footnoteref_4">4</a>. If familiar with, say, C++, you can think of <code>mktree</code> as a sort of constructor and <code>rmtree</code> as a sort of destructor.
 </div>
 </div>

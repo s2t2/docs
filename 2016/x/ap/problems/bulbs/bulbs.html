@@ -526,7 +526,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </li>
 <li><a href="#assessment">Assessment</a></li>
 <li><a href="#light-bright">Light Bright</a></li>
-<li><a href="#we-ve-just-scratched-the-surface">We&#8217;ve Just Scratched the Surface</a></li>
+<li><a href="#weve-just-scratched-the-surface">We&#8217;ve Just Scratched the Surface</a></li>
 <li><a href="#standing-on-our-shoulders">Standing on Our Shoulders</a></li>
 <li><a href="#how-to-submit">How to Submit</a></li>
 </ul>
@@ -745,16 +745,16 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="we-ve-just-scratched-the-surface"><a class="link" href="#we-ve-just-scratched-the-surface">We&#8217;ve Just Scratched the Surface</a></h2>
+<h2 id="weve-just-scratched-the-surface"><a class="link" href="#weve-just-scratched-the-surface">We&#8217;ve Just Scratched the Surface</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In <a href="http://cdn.cs50.net/ap/1617/problems/scratch.html">Scratch</a>, your charge was to explore Scratch, tinkering around with puzzle pieces as you saw fit and creating a project entirely of your own design. To that end, you may not have had the chance to explore all facets of Scratch, including one of the features that makes it such a fun language to play with&#8212;&#8203;remixing.</p>
 </div>
 <div class="paragraph">
-<p>In the context of Scratch, <em>remixing</em> a project means creating a copy of its sprites and scripts (which is saved online in your Scratch account), and then putting your own unique twist on those sprites and scripts to create a Scratch project that draws inspiration from the original but takes it one step further in some way.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></p>
+<p>In the context of Scratch, <em>remixing</em> a project means creating a copy of its sprites and scripts (which is saved online in your Scratch account), and then putting your own unique twist on those sprites and scripts to create a Scratch project that draws inspiration from the original but takes it one step further in some way.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>Computer scientists actually do this all the time. As we&#8217;ll soon see when we begin programming in C, we as programmers have access to a wonderful and wide-ranging suite of libraries and built-in functions that will make our ability to write programs that much easier. By standing on the shoulders of the giants who came before us, to paraphrase Isaac Newton<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>, we&#8217;ll be empowered to write programs that use those building blocks and do so much more.</p>
+<p>Computer scientists actually do this all the time. As we&#8217;ll soon see when we begin programming in C, we as programmers have access to a wonderful and wide-ranging suite of libraries and built-in functions that will make our ability to write programs that much easier. By standing on the shoulders of the giants who came before us, to paraphrase Isaac Newton<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>, we&#8217;ll be empowered to write programs that use those building blocks and do so much more.</p>
 </div>
 <div class="paragraph">
 <p>So let&#8217;s get to remixing. If you head to <a href="https://scratch.mit.edu/projects/75558248/" class="bare">https://scratch.mit.edu/projects/75558248/</a>, it looks as though Doug was in the middle of building a Scratch-based replica of the CS50 binary bulbs rig, but failed to complete it. Try it out yourself for a minute or two. In particular, what you may notice is that while the bulbs all turn on and off when clicked, and hints of functionality for a standard and Hacker mode exists (simulating the placement and removal of the place-value hinting magnets), there is no way to win this "game." When you click <strong>Guess</strong> button, the sprite simply says "TODO" for a few moments. Even if all the correct light bulbs are lit up when the button is pressed, seems it&#8217;s impossible to win the game.</p>
@@ -763,7 +763,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>Let&#8217;s help Doug out and finish this game for him!</p>
 </div>
 <div class="paragraph">
-<p>If you&#8217;re logged into your Scratch account, which you likely created in the last problem<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup>, head to Doug&#8217;s project, then click <strong>See Inside</strong> to have a peek at what underlies this Scratch project. Seems there are currently 46 scripts and 19 sprites, though many of those sprites share nearly identical scripts. For example, each of the eight light bulb sprites have the same scripts for turning on and off (switching costumes) when clicked, and similarly the eight sets of "magnets" for the place values simply appear or disappear depending on whether the button in the bottom-right corner says "Hints On" or "Hints Off" (again, two different costumes).</p>
+<p>If you&#8217;re logged into your Scratch account, which you likely created in the last problem<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, head to Doug&#8217;s project, then click <strong>See Inside</strong> to have a peek at what underlies this Scratch project. Seems there are currently 46 scripts and 19 sprites, though many of those sprites share nearly identical scripts. For example, each of the eight light bulb sprites have the same scripts for turning on and off (switching costumes) when clicked, and similarly the eight sets of "magnets" for the place values simply appear or disappear depending on whether the button in the bottom-right corner says "Hints On" or "Hints Off" (again, two different costumes).</p>
 </div>
 <div class="paragraph">
 <p>Click on the sprite for the <strong>Guess</strong> button. Ah! There&#8217;s the culprit. Right now there&#8217;s just a puzzle piece that for saying "TODO"&mdash;surely a note to Doug&#8217;s future self to eventually replace that with Scratch puzzle pieces that would be more meaningful. Your first task for this assignment is to replace that TODO. But to do that, you&#8217;ll first need to download Doug&#8217;s project, either by clicking the <strong>Remix</strong> button near the top of the page or by choosing <strong>File&#8230;&#8203; Download to your computer</strong> if you&#8217;re planning on using Scratch&#8217;s offline editor for this problem.</p>
@@ -828,13 +828,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. Alternatively, you could download all project&#8217;s assets and remix the project using the offline editor!
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. By the way, did you know that the whole "apple-falling-on-his-head" thing is at least partially a myth? <a href="http://www.todayifoundout.com/index.php/2013/10/origin-apple-falling-newtons-head-story/" class="bare">http://www.todayifoundout.com/index.php/2013/10/origin-apple-falling-newtons-head-story/</a>
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. If you didn&#8217;t, you can now by heading to <a href="http://scratch.mit.edu/" class="bare">http://scratch.mit.edu/</a> and signing up for an account (if you are 13 or older) on MIT&#8217;s website by clicking <strong>Join Scratch</strong> atop the page, then selecting a username and password of your choice
 </div>
 </div>

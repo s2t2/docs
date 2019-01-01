@@ -552,8 +552,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#lookup-2">lookup</a></li>
 <li><a href="#parse-2">parse</a>
 <ul class="sectlevel3">
-<li><a href="#code-abs_path-code"><code>abs_path</code></a></li>
-<li><a href="#code-query-code"><code>query</code></a></li>
+<li><a href="#abs_path"><code>abs_path</code></a></li>
+<li><a href="#query"><code>query</code></a></li>
 </ul>
 </li>
 <li><a href="#load-2">load</a></li>
@@ -668,7 +668,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="paragraph">
-<p>in order to download a ZIP (i.e., compressed version) of this problem set&#8217;s distro<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.  If you then execute</p>
+<p>in order to download a ZIP (i.e., compressed version) of this problem set&#8217;s distro<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.  If you then execute</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1245,7 +1245,7 @@ Content-type: text/html
 <p>Here&#8217;s how.</p>
 </div>
 <div class="sect3">
-<h4 id="code-abs_path-code"><a class="link" href="#code-abs_path-code"><code>abs_path</code></a></h4>
+<h4 id="abs_path"><a class="link" href="#abs_path"><code>abs_path</code></a></h4>
 <div class="paragraph">
 <p>Per 3.1.1 of <a href="http://tools.ietf.org/html/rfc7230" class="bare">http://tools.ietf.org/html/rfc7230</a>, a <code>request-line</code> is defined as</p>
 </div>
@@ -1298,7 +1298,7 @@ Content-type: text/html
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-query-code"><a class="link" href="#code-query-code"><code>query</code></a></h4>
+<h4 id="query"><a class="link" href="#query"><code>query</code></a></h4>
 <div class="paragraph">
 <p>Store at the address in <code>query</code> the <code>query</code> substring from <code>request-target</code>. If that substring is absent (even if a <code>?</code> is present), then <code>query</code> should be <code>""</code>, thereby consuming one byte, whereby <code>query[0]</code> is <code>'\0'</code>. You may assume that the memory to which <code>query</code> points will be at least of length <code>LimitRequestLine</code> + 1.</p>
 </div>
@@ -1378,7 +1378,7 @@ Content-type: text/html
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. As with the last problem set, we continue to use the Fall 2015 version of problem sets this semester because the Fall 2016 versions rely on Python, which is not being taught this year in CSCI E-50b, as it is a continuation of work you did last spring.
 </div>
 </div>

@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -593,7 +593,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Leaky</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Fix memory leaks in various contexts.</p>
@@ -810,18 +810,18 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p><code>leak1</code> generates random numbers like <code>leak0</code>, but reads them out twice.</p>
 </li>
 <li>
-<p><code>leak2</code> seems to print the message <code>(nil)</code> 50 times, once per line<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>, then seems to generate 50 random numbers and prints those out as well, one per line.</p>
+<p><code>leak2</code> seems to print the message <code>(nil)</code> 50 times, once per line<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>, then seems to generate 50 random numbers and prints those out as well, one per line.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Opening up <code>leak0.c</code>, <code>leak1.c</code>, and <code>leak2.c</code> will allow you to confirm or detect what the intended behavior of these programs actually is. And of course, it seems that we&#8217;ve neglected to include comments in any of those files and have not exactly given our functions the most intuitive names!<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></p>
+<p>Opening up <code>leak0.c</code>, <code>leak1.c</code>, and <code>leak2.c</code> will allow you to confirm or detect what the intended behavior of these programs actually is. And of course, it seems that we&#8217;ve neglected to include comments in any of those files and have not exactly given our functions the most intuitive names!<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Just by running the programs, nothing seems to be amiss. There are no segmentation faults or other obvious crashes. Just to be safe, we should run each through <code>valgrind</code> too.</p>
 </div>
 <div class="paragraph">
-<p>Darn! Well, looks like there&#8217;s work to be done. And that&#8217;s where we&#8217;ll turn to you. Plug these memory leaks for us so that the programs have the behavior their source code intends, in particular making sure that <code>leak2</code> does what it should do!<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup></p>
+<p>Darn! Well, looks like there&#8217;s work to be done. And that&#8217;s where we&#8217;ll turn to you. Plug these memory leaks for us so that the programs have the behavior their source code intends, in particular making sure that <code>leak2</code> does what it should do!<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>You are generally free to plug the leaks in any way you wish, bearing in mind the requirement that if the program originally dealt with memory by dynamically allocating it, your fixed version must also use dynamically allocated memory, and cannot thus rely solely on memory from the stack to solve the problem. Once you have a clean bill of health from Valgrind, you&#8217;re good to go!</p>
@@ -844,13 +844,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. Hmmm, seems like that&#8217;s working in the wrong order&#8230;&#8203;
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. See how important it is to do these things in your programs?
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. Remember those weird <code>nil</code> statements from before? Make them print something useful!
 </div>
 </div>

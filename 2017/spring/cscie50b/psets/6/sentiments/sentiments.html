@@ -517,7 +517,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#background">Background</a></li>
 <li><a href="#distribution">Distribution</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
@@ -525,7 +525,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#walkthroughs">Walkthroughs</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#testing">Testing</a></li>
-<li><a href="#staff-s-solution">Staff&#8217;s Solution</a></li>
+<li><a href="#staffs-solution">Staff&#8217;s Solution</a></li>
 <li><a href="#hints">Hints</a></li>
 <li><a href="#faqs">FAQs</a></li>
 <li><a href="#changelog">CHANGELOG</a></li>
@@ -536,7 +536,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Sentiments</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -613,7 +613,7 @@ application.py  negative-words.txt  requirements.txt    templates/</code></pre>
 <div class="sect2">
 <h3 id="understanding"><a class="link" href="#understanding">Understanding</a></h3>
 <div class="sect3">
-<h4 id="code-smile-code"><a class="link" href="#code-smile-code"><code>smile</code></a></h4>
+<h4 id="smile"><a class="link" href="#smile"><code>smile</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>smile</code> in <code>sentiments/</code>. Suffice it to say that file&#8217;s name doesn&#8217;t end in <code>.py</code>, even though the file contains a program written in Python. But that&#8217;s okay! Notice the "shebang" atop the file:</p>
 </div>
@@ -633,7 +633,7 @@ application.py  negative-words.txt  requirements.txt    templates/</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-analyzer-py-code"><a class="link" href="#code-analyzer-py-code"><code>analyzer.py</code></a></h4>
+<h4 id="analyzer-py"><a class="link" href="#analyzer-py"><code>analyzer.py</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>anlyzer.py</code> in <code>sentiments/</code>. Not much going on in there (yet)! Notice, though, that it imports the <a href="http://www.nltk.org/">Natural Language Toolkit</a>, among whose features is a <a href="http://www.nltk.org/api/nltk.tokenize.html">tokenizer</a> that you can use to split a tweet (which is maximally a 140-character <code>str</code> object) into a <code>list</code> of words (i.e., shorter <code>str</code> objects).</p>
 </div>
@@ -645,49 +645,49 @@ application.py  negative-words.txt  requirements.txt    templates/</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-positive-words-txt-code-code-negative-words-txt-code"><a class="link" href="#code-positive-words-txt-code-code-negative-words-txt-code"><code>positive-words.txt</code>, <code>negative-words.txt</code></a></h4>
+<h4 id="positive-words-txt-negative-words-txt"><a class="link" href="#positive-words-txt-negative-words-txt"><code>positive-words.txt</code>, <code>negative-words.txt</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>positive-words.txt</code> and <code>negative-words.txt</code> (without changing them). Notice that atop each file is a bunch of comments, each of which starts with a <code>;</code>. (Those are just text files, though, so the authors' choice of <code>;</code> is arbitrary.) The lists of positive and negative words, respectively, begin below those comments, after a blank line.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-tweets-code"><a class="link" href="#code-tweets-code"><code>tweets</code></a></h4>
+<h4 id="tweets"><a class="link" href="#tweets"><code>tweets</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>tweets</code>. Ah, another shebang. But nothing else besides a <code>TODO</code>! More on that soon.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-helpers-py-code"><a class="link" href="#code-helpers-py-code"><code>helpers.py</code></a></h4>
+<h4 id="helpers-py"><a class="link" href="#helpers-py"><code>helpers.py</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>helpers.py</code>. You should see two functions: <code>chart</code> and <code>get_user_timeline</code>. Given three values (<code>positive</code>, <code>negative</code>, and <code>neutral</code>, each an <code>int</code> or a <code>float</code>), <code>chart</code> generates HTML (as a <code>str</code>) for a pie chart depicting those values. Given a screen name, meanwhile, <code>get_user_timeline</code> returns a <code>list</code> of tweets (each as a <code>str</code>). That function uses <a href="https://twython.readthedocs.io/">Twython</a> (har har), a library for Python, to retrieve those tweets via <a href="https://dev.twitter.com/overview/api">Twitter&#8217;s API</a> (application programming interface), a free service that can be queried programmatically for tweets. Notice how the function expects two "environment variables" to exist. Environment variables exist within your terminal window, key/value pairs that programs (like <code>tweets</code>) can access programmatically. We&#8217;ll soon use two, <code>API_KEY</code> and <code>API_SECRET</code>, to store credentials for Twitter.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-application-py-code"><a class="link" href="#code-application-py-code"><code>application.py</code></a></h4>
+<h4 id="application-py"><a class="link" href="#application-py"><code>application.py</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>application.py</code>. In this file is a "controller" for a Flask-based web app with two endpoints: <code>/</code> and <code>/search</code>. The first displays the simplest of forms via which you can search for a user on Twitter by screen name. The second displays one of those pie charts categorizing that user&#8217;s tweets. Notice, though, how 100% of those tweets are (temporarily) assumed to be neutral.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-templates-index-html-code"><a class="link" href="#code-templates-index-html-code"><code>templates/index.html</code></a></h4>
+<h4 id="templatesindex-html"><a class="link" href="#templatesindex-html"><code>templates/index.html</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>templates/index.html</code>. In there is that simplest of forms. Notice how it figures out via <code>url_for</code>, a function that comes with Flask, to what URL the form should be submitted.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-templates-search-html-code"><a class="link" href="#code-templates-search-html-code"><code>templates/search.html</code></a></h4>
+<h4 id="templatessearch-html"><a class="link" href="#templatessearch-html"><code>templates/search.html</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>templates/search.html</code>. Notice how this template renders a user&#8217;s screen name as well as that pie chart.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-templates-layout-html-code"><a class="link" href="#code-templates-layout-html-code"><code>templates/layout.html</code></a></h4>
+<h4 id="templateslayout-html"><a class="link" href="#templateslayout-html"><code>templates/layout.html</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>templates/layout.html</code>. In here is a layout on which <code>index.html</code> and <code>search.html</code> depend. It leverages <a href="http://getbootstrap.com/">Bootstrap</a> to override browsers' default aesthetics.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-requirements-txt-code"><a class="link" href="#code-requirements-txt-code"><code>requirements.txt</code></a></h4>
+<h4 id="requirements-txt"><a class="link" href="#requirements-txt"><code>requirements.txt</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>requirements.txt</code> (without changing it, though you can later if you&#8217;d like). This file specifies the libraries, one per line, on which all of this functionality depends.</p>
 </div>
@@ -814,7 +814,7 @@ pip3 install --user -r requirements.txt</code></pre>
 <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="code-analyzer-py-code-2"><a class="link" href="#code-analyzer-py-code-2"><code>analyzer.py</code></a></h3>
+<h3 id="analyzer-py-2"><a class="link" href="#analyzer-py-2"><code>analyzer.py</code></a></h3>
 <div class="paragraph">
 <p>Complete the implementation of <code>analyzer.py</code> in such a way that</p>
 </div>
@@ -863,7 +863,7 @@ pip3 install --user -r requirements.txt</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-tweets-code-2"><a class="link" href="#code-tweets-code-2"><code>tweets</code></a></h3>
+<h3 id="tweets-2"><a class="link" href="#tweets-2"><code>tweets</code></a></h3>
 <div class="paragraph">
 <p>Complete the implementation of <code>main</code> in <code>tweets</code> in such a way that program</p>
 </div>
@@ -885,7 +885,7 @@ pip3 install --user -r requirements.txt</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-application-py-code-2"><a class="link" href="#code-application-py-code-2"><code>application.py</code></a></h3>
+<h3 id="application-py-2"><a class="link" href="#application-py-2"><code>application.py</code></a></h3>
 <div class="paragraph">
 <p>Complete the implementation of <code>search</code> in <code>application.py</code> in such a way that the function</p>
 </div>
@@ -984,10 +984,10 @@ $ <span class="underline">./tweets @cs50</span>
 </div>
 </div>
 <div class="sect1">
-<h2 id="staff-s-solution"><a class="link" href="#staff-s-solution">Staff&#8217;s Solution</a></h2>
+<h2 id="staffs-solution"><a class="link" href="#staffs-solution">Staff&#8217;s Solution</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="code-smile-code-2"><a class="link" href="#code-smile-code-2"><code>smile</code></a></h3>
+<h3 id="smile-2"><a class="link" href="#smile-2"><code>smile</code></a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code>~cs50/pset6/smile</code></pre>
@@ -995,7 +995,7 @@ $ <span class="underline">./tweets @cs50</span>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-tweets-code-3"><a class="link" href="#code-tweets-code-3"><code>tweets</code></a></h3>
+<h3 id="tweets-3"><a class="link" href="#tweets-3"><code>tweets</code></a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code>~cs50/pset6/tweets</code></pre>
@@ -1008,7 +1008,7 @@ $ <span class="underline">./tweets @cs50</span>
 <h2 id="hints"><a class="link" href="#hints">Hints</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="code-analyzer-py-code-3"><a class="link" href="#code-analyzer-py-code-3"><code>analyzer.py</code></a></h3>
+<h3 id="analyzer-py-3"><a class="link" href="#analyzer-py-3"><code>analyzer.py</code></a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1050,7 +1050,7 @@ $ <span class="underline">./tweets @cs50</span>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-tweets-code-4"><a class="link" href="#code-tweets-code-4"><code>tweets</code></a></h3>
+<h3 id="tweets-4"><a class="link" href="#tweets-4"><code>tweets</code></a></h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1063,7 +1063,7 @@ $ <span class="underline">./tweets @cs50</span>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-application-py-code-3"><a class="link" href="#code-application-py-code-3"><code>application.py</code></a></h3>
+<h3 id="application-py-3"><a class="link" href="#application-py-3"><code>application.py</code></a></h3>
 <div class="ulist">
 <ul>
 <li>

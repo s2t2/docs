@@ -577,17 +577,17 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#distribution">Distribution</a>
 <ul class="sectlevel2">
 <li><a href="#downloading">Downloading</a></li>
 <li><a href="#understanding">Understanding</a>
 <ul class="sectlevel3">
-<li><a href="#code-dictionary-h-code"><code>dictionary.h</code></a></li>
-<li><a href="#code-dictionary-c-code"><code>dictionary.c</code></a></li>
-<li><a href="#code-speller-c-code"><code>speller.c</code></a></li>
-<li><a href="#code-texts-code"><code>texts/</code></a></li>
-<li><a href="#code-makefile-code"><code>Makefile</code></a></li>
+<li><a href="#dictionary-h"><code>dictionary.h</code></a></li>
+<li><a href="#dictionary-c"><code>dictionary.c</code></a></li>
+<li><a href="#speller-c"><code>speller.c</code></a></li>
+<li><a href="#texts"><code>texts/</code></a></li>
+<li><a href="#makefile"><code>Makefile</code></a></li>
 </ul>
 </li>
 </ul>
@@ -597,10 +597,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#hints">Hints</a></li>
 <li><a href="#testing">Testing</a>
 <ul class="sectlevel2">
-<li><a href="#code-check50-code"><code>check50</code></a></li>
+<li><a href="#check50"><code>check50</code></a></li>
 </ul>
 </li>
-<li><a href="#staff-s-solution">Staff&#8217;s Solution</a></li>
+<li><a href="#staffs-solution">Staff&#8217;s Solution</a></li>
 <li><a href="#big-board">Big Board</a></li>
 <li><a href="#how-to-submit">How to Submit</a></li>
 </ul>
@@ -616,7 +616,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement a program that spell-checks a file, a la the below, using a trie.</p>
@@ -708,7 +708,7 @@ TIME IN TOTAL:</code></pre>
 <p>In <code>speller.c</code>, we&#8217;ve put together a program that&#8217;s designed to spell-check a file after loading a dictionary of words from disk into memory. That dictionary, meanwhile, is implemented in a file called <code>dictionary.c</code>. (It could just be implemented in <code>speller.c</code>, but as programs get more complex, it&#8217;s often convenient to break them into multiple files.) The prototypes for the functions therein, meanwhile, are defined not in <code>dictionary.c</code> itself but in <code>dictionary.h</code> instead. That way, both <code>speller.c</code> and <code>dictionary.c</code> can <code>#include</code> the file. Unfortunately, we didn&#8217;t quite get around to implementing the loading part. Or the checking part. Both (and a bit more) we leave to you! But first, a tour.</p>
 </div>
 <div class="sect3">
-<h4 id="code-dictionary-h-code"><a class="link" href="#code-dictionary-h-code"><code>dictionary.h</code></a></h4>
+<h4 id="dictionary-h"><a class="link" href="#dictionary-h"><code>dictionary.h</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>dictionary.h</code>, and you&#8217;ll see some new syntax, including a few lines that mention <code>DICTIONARY_H</code>. No need to worry about those, but, if curious, those lines just ensure that, even though <code>dictionary.c</code> and <code>speller.c</code> (which you&#8217;ll see in a moment) <code>#include</code> this file, <code>clang</code> will only compile it once.</p>
 </div>
@@ -741,7 +741,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-dictionary-c-code"><a class="link" href="#code-dictionary-c-code"><code>dictionary.c</code></a></h4>
+<h4 id="dictionary-c"><a class="link" href="#dictionary-c"><code>dictionary.c</code></a></h4>
 <div class="paragraph">
 <p>Now open up <code>dictionary.c</code>. Notice how, atop the file, we&#8217;ve defined a <code>struct</code> called <code>node</code> that represents a node in a trie. And we&#8217;ve declared a global array, <code>root</code>, that represents the root (i.e., topmost node) of a trie.</p>
 </div>
@@ -753,7 +753,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-speller-c-code"><a class="link" href="#code-speller-c-code"><code>speller.c</code></a></h4>
+<h4 id="speller-c"><a class="link" href="#speller-c"><code>speller.c</code></a></h4>
 <div class="paragraph">
 <p>Okay, next open up <code>speller.c</code> and spend some time looking over the code and comments therein. You won&#8217;t need to change anything in this file, and you don&#8217;t need to understand its entirety, but do try to get a sense of its functionality nonetheless. Notice how, by way of a function called <code>getrusage</code>, we&#8217;ll be "benchmarking" (i.e., timing the execution of) your implementations of <code>check</code>, <code>load</code>, <code>size</code>, and <code>unload</code>. Also notice how we go about passing <code>check</code>, word by word, the contents of some file to be spell-checked. Ultimately, we report each misspelling in that file along with a bunch of statistics.</p>
 </div>
@@ -800,7 +800,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-texts-code"><a class="link" href="#code-texts-code"><code>texts/</code></a></h4>
+<h4 id="texts"><a class="link" href="#texts"><code>texts/</code></a></h4>
 <div class="paragraph">
 <p>So that you can test your implementation of <code>speller</code>, we&#8217;ve also provided you with a whole bunch of texts, among them the script from <em>La La Land</em>, the text of the Affordable Care Act, three million bytes from Tolstoy, some excerpts from <em>The Federalist Papers</em> and Shakespeare, the entirety of the King James V Bible and the Koran, and more. So that you know what to expect, open and skim each of those files, all of which are in a directory called <code>texts</code> within your <code>pset4</code> directory.</p>
 </div>
@@ -858,7 +858,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-makefile-code"><a class="link" href="#code-makefile-code"><code>Makefile</code></a></h4>
+<h4 id="makefile"><a class="link" href="#makefile"><code>Makefile</code></a></h4>
 <div class="paragraph">
 <p>And, lastly, recall that <code>make</code> automates compilation of your code so that you don&#8217;t have to execute <code>clang</code> manually along with a whole bunch of switches. However, as your programs grow in size, <code>make</code> won&#8217;t be able to infer from context anymore how to compile your code; you&#8217;ll need to start telling <code>make</code> how to compile your program, particularly when they involve multiple source (i.e., <code>.c</code>) files, as in the case of this problem. And so we&#8217;ll utilize a <code>Makefile</code>, a configuration file that tells <code>make</code> exactly what to do. Open up <code>Makefile</code>, and you should see four lines:</p>
 </div>
@@ -1049,7 +1049,7 @@ L                                                               L</code></pre>
 <p>that means your program (whose output is on the left) does not think that <code>Thelonious</code> or <code>MIA</code> is misspelled, even though the staff&#8217;s output (on the right) does, as is implied by the absence of, say, <code>Thelonious</code> in the lefthand column and the presence of <code>Thelonious</code> in the righthand column.</p>
 </div>
 <div class="sect2">
-<h3 id="code-check50-code"><a class="link" href="#code-check50-code"><code>check50</code></a></h3>
+<h3 id="check50"><a class="link" href="#check50"><code>check50</code></a></h3>
 <div class="paragraph">
 <p>To test your code less manually (though still not exhaustively), you may also execute the below.</p>
 </div>
@@ -1065,7 +1065,7 @@ L                                                               L</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="staff-s-solution"><a class="link" href="#staff-s-solution">Staff&#8217;s Solution</a></h2>
+<h2 id="staffs-solution"><a class="link" href="#staffs-solution">Staff&#8217;s Solution</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>How to assess just how fast (and correct) your code is? Well, as always, feel free to play with the staff&#8217;s solution, as with the below, and compare its numbers against yours.</p>

@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -591,26 +591,26 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#downloading">Downloading</a></li>
 <li><a href="#understanding">Understanding</a>
 <ul class="sectlevel3">
-<li><a href="#code-songs-code"><code>songs/</code></a></li>
-<li><a href="#code-notes-c-code"><code>notes.c</code></a></li>
-<li><a href="#code-synthesize-c-code"><code>synthesize.c</code></a></li>
-<li><a href="#code-wav-h-code"><code>wav.h</code></a></li>
-<li><a href="#code-wav-c-code"><code>wav.c</code></a></li>
-<li><a href="#code-makefile-code"><code>Makefile</code></a></li>
-<li><a href="#code-helpers-h-code"><code>helpers.h</code></a></li>
-<li><a href="#code-helpers-c-code"><code>helpers.c</code></a></li>
+<li><a href="#songs"><code>songs/</code></a></li>
+<li><a href="#notes-c"><code>notes.c</code></a></li>
+<li><a href="#synthesize-c"><code>synthesize.c</code></a></li>
+<li><a href="#wav-h"><code>wav.h</code></a></li>
+<li><a href="#wav-c"><code>wav.c</code></a></li>
+<li><a href="#makefile"><code>Makefile</code></a></li>
+<li><a href="#helpers-h"><code>helpers.h</code></a></li>
+<li><a href="#helpers-c"><code>helpers.c</code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#specification">Specification</a>
 <ul class="sectlevel2">
-<li><a href="#code-bday-txt-code"><code>bday.txt</code></a></li>
-<li><a href="#code-helpers-c-code-2"><code>helpers.c</code></a>
+<li><a href="#bday-txt"><code>bday.txt</code></a></li>
+<li><a href="#helpers-c-2"><code>helpers.c</code></a>
 <ul class="sectlevel3">
-<li><a href="#code-is_rest-code"><code>is_rest</code></a></li>
-<li><a href="#code-duration-code"><code>duration</code></a></li>
-<li><a href="#code-frequency-code"><code>frequency</code></a></li>
+<li><a href="#is_rest"><code>is_rest</code></a></li>
+<li><a href="#duration"><code>duration</code></a></li>
+<li><a href="#frequency"><code>frequency</code></a></li>
 </ul>
 </li>
 </ul>
@@ -636,7 +636,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Music</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -968,7 +968,7 @@ Your browser does not support the audio tag.
 <p>Let&#8217;s read through those files in order to understand them. Moving forward, reading (and understanding!) someone else&#8217;s code, whether ours or some library&#8217;s, will often be the first step in solving a problem. That way, you can build upon the work of others and solve even more interesting problems yourself!</p>
 </div>
 <div class="sect3">
-<h4 id="code-songs-code"><a class="link" href="#code-songs-code"><code>songs/</code></a></h4>
+<h4 id="songs"><a class="link" href="#songs"><code>songs/</code></a></h4>
 <div class="paragraph">
 <p>First open up <code>songs/</code>, as with <code>cd</code> or CS50 IDE&#8217;s file browser. In that directory are a bunch of <code>.txt</code> files, inside of which, it turns out, are a number of songs! Because ASCII alone doesn&#8217;t lend itself to beautiful sheet music, we&#8217;ve instead adopted for these files a "machine-readable" format for songs instead. On each line of a file is a note and duration, separated by an <code>@</code>. For instance, atop <code>jeopardy.txt</code> (which you&#8217;re welcome to open) are these lines:</p>
 </div>
@@ -994,7 +994,7 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-notes-c-code"><a class="link" href="#code-notes-c-code"><code>notes.c</code></a></h4>
+<h4 id="notes-c"><a class="link" href="#notes-c"><code>notes.c</code></a></h4>
 <div class="paragraph">
 <p>Next open up <code>notes.c</code>. In this file is a program (soon to be called <code>notes</code>) that not only prints the frequencies (in Hz) of all of the notes in an octave, it also outputs a WAV file (an audio file) via which you can hear those same notes. By default, it does so for the fourth octave, but if you pass it a command-line argument (a number between 0 and 8, inclusive), you can see and hear the frequencies of any octave&#8217;s notes.</p>
 </div>
@@ -1012,13 +1012,13 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-synthesize-c-code"><a class="link" href="#code-synthesize-c-code"><code>synthesize.c</code></a></h4>
+<h4 id="synthesize-c"><a class="link" href="#synthesize-c"><code>synthesize.c</code></a></h4>
 <div class="paragraph">
 <p>In this file is a program (soon to be called <code>synthesize</code>) that synthesizes (i.e., generates) a song from a sequence of notes. Notice how it gets those notes from a user one at a time using <code>get_string</code>. It first checks, though, whether the user&#8217;s input is a rest, as would happen if the user simply hits Enter. Else it proceeds to "tokenize" the user&#8217;s input into two tokens: a note, which can be found to the left of the <code>@</code> in the user&#8217;s input, and a fraction, which can be found to the right of the <code>@</code> in the user&#8217;s input. The program uses a function called <code>strtok</code> to facilitate such. It then writes that note (or rest) to a file.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-wav-h-code"><a class="link" href="#code-wav-h-code"><code>wav.h</code></a></h4>
+<h4 id="wav-h"><a class="link" href="#wav-h"><code>wav.h</code></a></h4>
 <div class="paragraph">
 <p>Next open up <code>wav.h</code>, a header file used by both <code>notes.c</code> and <code>synthesize.c</code>. This file, together with <code>wav.c</code>, represents not a program but a "library," a set of functions that other programs can use as building blocks, much like <code>cs50</code> and <code>stdio</code> are libraries. This library&#8217;s code just so happens to live in your work workspace now.</p>
 </div>
@@ -1027,7 +1027,7 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-wav-c-code"><a class="link" href="#code-wav-c-code"><code>wav.c</code></a></h4>
+<h4 id="wav-c"><a class="link" href="#wav-c"><code>wav.c</code></a></h4>
 <div class="paragraph">
 <p>In <code>wav.c</code>, meanwhile, are the actual implementations of those functions plus a few others. Indeed, this file contains functions that implement support for WAV files, a popular (if dated) file format for audio. Those functions allow <code>notes</code> and <code>synthesize</code> to save notes to disk in files ending in <code>.wav</code>. To play those <code>.wav</code> files, simply open them via CS50 IDE&#8217;s file browser. Or download them to your Mac or PC to play them locally.</p>
 </div>
@@ -1036,7 +1036,7 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-makefile-code"><a class="link" href="#code-makefile-code"><code>Makefile</code></a></h4>
+<h4 id="makefile"><a class="link" href="#makefile"><code>Makefile</code></a></h4>
 <div class="paragraph">
 <p>Next open up <code>Makefile</code>, the format of which is perhaps quite different from anything you&#8217;ve seen before. As its name might suggest, it&#8217;s related to <code>make</code>, the program you&#8217;ve probably been using compile most of your programs, if only because compiling programs with <code>clang</code> itself tends to require more keystrokes. In previous problems, we&#8217;ve not needed a <code>Makefile</code>, which is essentially a configuration file for <code>make</code>, since <code>make</code> can infer how to compile a program that&#8217;s composed of a single file (e.g., <code>hello.c</code>). But compiling both <code>notes</code> and <code>synthesize</code> requires multiple files, since both programs rely on <code>wav.h</code> and <code>wav.c</code>, plus two other files, <code>helpers.h</code> and <code>helpers.c</code>.</p>
 </div>
@@ -1061,7 +1061,7 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-helpers-h-code"><a class="link" href="#code-helpers-h-code"><code>helpers.h</code></a></h4>
+<h4 id="helpers-h"><a class="link" href="#helpers-h"><code>helpers.h</code></a></h4>
 <div class="paragraph">
 <p>In this file, now, are declarations for three functions:</p>
 </div>
@@ -1097,7 +1097,7 @@ G4@1/4</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-helpers-c-code"><a class="link" href="#code-helpers-c-code"><code>helpers.c</code></a></h4>
+<h4 id="helpers-c"><a class="link" href="#helpers-c"><code>helpers.c</code></a></h4>
 <div class="paragraph">
 <p>And in this file there <em>should</em> be implementations of those three functions, but no! Not yet. That&#8217;s where you come in!</p>
 </div>
@@ -1109,7 +1109,7 @@ G4@1/4</code></pre>
 <h2 id="specification"><a class="link" href="#specification">Specification</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="code-bday-txt-code"><a class="link" href="#code-bday-txt-code"><code>bday.txt</code></a></h3>
+<h3 id="bday-txt"><a class="link" href="#bday-txt"><code>bday.txt</code></a></h3>
 <div class="paragraph">
 <p>In <code>bday.txt</code>, type the ASCII representation of <em>Happy Birthday</em>, translating its sheet music, above, to the machine-readable representation prescribed herein. You should find that the song begins with:</p>
 </div>
@@ -1125,9 +1125,9 @@ F#4@1/2</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-helpers-c-code-2"><a class="link" href="#code-helpers-c-code-2"><code>helpers.c</code></a></h3>
+<h3 id="helpers-c-2"><a class="link" href="#helpers-c-2"><code>helpers.c</code></a></h3>
 <div class="sect3">
-<h4 id="code-is_rest-code"><a class="link" href="#code-is_rest-code"><code>is_rest</code></a></h4>
+<h4 id="is_rest"><a class="link" href="#is_rest"><code>is_rest</code></a></h4>
 <div class="paragraph">
 <p>Complete the implementation of <code>is_rest</code> in <code>helpers.c</code>. Recall that blank lines represent rests in our machine-readable format. And recall that <code>synthesize</code> will call this function in order to determine if one of the lines a user has typed in is indeed blank.</p>
 </div>
@@ -1145,13 +1145,13 @@ F#4@1/2</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-duration-code"><a class="link" href="#code-duration-code"><code>duration</code></a></h4>
+<h4 id="duration"><a class="link" href="#duration"><code>duration</code></a></h4>
 <div class="paragraph">
 <p>Complete the implementation of <code>duration</code> in <code>helpers.c</code>. Recall that this function should take as input as a <code>string</code> a fraction and convert it into some integral number of eighths. You may assume that <code>duration</code> will only be passed a <code>string</code> formatted as <code>X/Y</code>, whereby each of <code>X</code> and <code>Y</code> is a positive decimal digit, and <code>Y</code> is, moreover, a power of 2.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-frequency-code"><a class="link" href="#code-frequency-code"><code>frequency</code></a></h4>
+<h4 id="frequency"><a class="link" href="#frequency"><code>frequency</code></a></h4>
 <div class="paragraph">
 <p>Finally, complete the implementation of <code>frequency</code> in <code>helpers.c</code>. Recall that this function should take as input as a <code>string</code> a note (e.g., <code>A4</code>) and return its corresponding frequency in hertz as an <code>int</code>.</p>
 </div>

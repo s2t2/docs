@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -606,7 +606,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Pennies</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement a program that calculates the sum of getting a doubled amount of money each day for a month, per the below.</p>
@@ -755,7 +755,7 @@ $10737418.23</code></pre>
 <h2 id="double-or-nothing"><a class="link" href="#double-or-nothing">Double or Nothing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If ever given the choice between $10,000,000 or a month&#8217;s worth of pennies, whereby you receive a penny the first day, two pennies the second, four pennies the third, and so forth&#8230;&#8203; take the pennies<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.</p>
+<p>If ever given the choice between $10,000,000 or a month&#8217;s worth of pennies, whereby you receive a penny the first day, two pennies the second, four pennies the third, and so forth&#8230;&#8203; take the pennies<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>Anyhow, why the pennies? Exponentiation. Those pennies add up Consider how many pennies you&#8217;d receive on the 31st day alone, not to mention on the days leading up to it:</p>
@@ -773,7 +773,7 @@ $10737418.23</code></pre>
 <p>Put more succinctly, that&#8217;s 1 × 2<sup>30</sup>. Convert those pennies to dollars (by dividing by 100) and you get, what, over $10,000,000? On just that day? Crazy.</p>
 </div>
 <div class="paragraph">
-<p>What if you were given more than one penny on that first day? Or the month were February, in which case you&#8217;d get shortchanged a few million? (Best to take the pennies in January, March, May, July, August, October, or December<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>.) Let&#8217;s find out.</p>
+<p>What if you were given more than one penny on that first day? Or the month were February, in which case you&#8217;d get shortchanged a few million? (Best to take the pennies in January, March, May, July, August, October, or December<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.) Let&#8217;s find out.</p>
 </div>
 <div class="paragraph">
 <p>Implement, in a file called <code>pennies.c</code>, a program that first asks the user how many days there are in the month and then asks the user how many pennies he or she will receive on the first day of that month. The program should then calculate the amount that the user will have received <strong>in total</strong> by the end of the month (not just on the last day) if that amount is doubled on every day but the first, expressed not as pennies but as dollars and cents. If the user does not type in 28, 29, 30, or 31 for the number of days in the month, the program should prompt the user to retry. If the user does not input a positive integer for the first day&#8217;s number of pennies, the program should prompt the user to retry.</p>
@@ -930,10 +930,10 @@ submit50 cs50/2018/ap/pennies</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. By contrast, if you receive an email from some stranger on the Internet offering you an opportunity to double your money, maybe think twice.
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. We&#8217;ll admit it. We had to look at a calendar.
 </div>
 </div>

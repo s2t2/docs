@@ -529,7 +529,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#getting-ready">Getting Ready</a></li>
 <li><a href="#getting-started">Getting Started</a>
 <ul class="sectlevel2">
-<li><a href="#option-1-use-the-staff-s-prng">Option 1: Use the Staff&#8217;s PRNG</a></li>
+<li><a href="#option-1-use-the-staffs-prng">Option 1: Use the Staff&#8217;s PRNG</a></li>
 <li><a href="#option-2-use-your-own-prng">Option 2: Use Your Own PRNG</a></li>
 </ul>
 </li>
@@ -873,7 +873,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>Then, after having chosen your option and followed all the steps therein, pick up at "Seek and Find".</p>
 </div>
 <div class="sect2">
-<h3 id="option-1-use-the-staff-s-prng"><a class="link" href="#option-1-use-the-staff-s-prng">Option 1: Use the Staff&#8217;s PRNG</a></h3>
+<h3 id="option-1-use-the-staffs-prng"><a class="link" href="#option-1-use-the-staffs-prng">Option 1: Use the Staff&#8217;s PRNG</a></h3>
 <div class="paragraph">
 <p>You&#8217;re pretty much done getting set up at this point, actually. Except you should probably peruse <code>generate.c</code>; you&#8217;ll notice that we&#8217;ve left several comments just reading <code>TODO</code>. Take a few minutes to complete those comments, just to ensure you understand what&#8217;s happening in that file.</p>
 </div>
@@ -977,7 +977,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>You&#8217;ll be prompted to provide some hay (i.e., some integers), one "straw" at a time.  As soon as you tire of providing integers, hit ctrl-d to send the program an <code>EOF</code> (end-of-file) character.  That character will compel <code>GetInt</code> from the CS50 Library to return <code>INT_MAX</code>, a constant that, per <code>seek.c</code>, will compel <code>seek</code> to stop prompting for hay.  The program will then look for that needle in the hay you provided, ultimately reporting whether the former was found in the latter.  In short, this program searches an array for some value.  At least, it should, but it won&#8217;t find anything yet! That&#8217;s where you come in.  More on your role in a bit.</p>
 </div>
 <div class="paragraph">
-<p>In turns out you can automate this process of providing hay, though, by "piping" the output of <code>generate</code> into <code>seek</code> as input.  For instance, the command below<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup> passes 1,000 pseudorandom numbers to <code>seek</code>, which then searches those values for <code>42</code>.</p>
+<p>In turns out you can automate this process of providing hay, though, by "piping" the output of <code>generate</code> into <code>seek</code> as input.  For instance, the command below<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> passes 1,000 pseudorandom numbers to <code>seek</code>, which then searches those values for <code>42</code>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1017,7 +1017,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="paragraph">
-<p>Because one of the numbers<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup> outputted by <code>generate</code>, when seeded with <code>50</code>, is <code>127</code>, your code should find that "needle"!  By contrast, try running the command below as well.</p>
+<p>Because one of the numbers<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> outputted by <code>generate</code>, when seeded with <code>50</code>, is <code>127</code>, your code should find that "needle"!  By contrast, try running the command below as well.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1220,10 +1220,10 @@ submit50 2016/ap/seek</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. This command and all subsequent references to the <code>generate</code> program assume use of the staff-provided PRNG. If you use your own PRNG you either have to change the command-line arguments you provide, since the PRNG you wrote took 2 or 3 command line arguments (not 1 or 2, like the staff&#8217;s), or modify your copy of <code>generate.c</code> to no longer take the <code>max</code> parameter. Your choice!
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. Again, assuming you&#8217;re using the staff-provided PRNG!
 </div>
 </div>

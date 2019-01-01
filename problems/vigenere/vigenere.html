@@ -517,17 +517,17 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#background">Background</a></li>
 <li><a href="#specification">Specification</a></li>
 <li><a href="#walkthrough">Walkthrough</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#testing">Testing</a>
 <ul class="sectlevel2">
-<li><a href="#code-check50-code"><code>check50</code></a></li>
+<li><a href="#check50"><code>check50</code></a></li>
 </ul>
 </li>
-<li><a href="#staff-s-solution">Staff&#8217;s Solution</a></li>
+<li><a href="#staffs-solution">Staff&#8217;s Solution</a></li>
 <li><a href="#hints">Hints</a></li>
 <li><a href="#faqs">FAQs</a></li>
 <li><a href="#changelog">Changelog</a></li>
@@ -537,7 +537,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Vigenère</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement a program that encrypts messages using Vigenère&#8217;s cipher, per the below.</p>
@@ -568,7 +568,7 @@ ciphertext: HFNLP</code></pre>
 <div class="paragraph">
 <p>In other words, if Vigenère himself wanted to say HELLO to someone confidentially, using a keyword of, say, ABC, he would encrypt the H with a key of 0 (i.e., A), the E with a key of 1 (i.e., B), and the first L with a key of 2 (i.e., C), at which point he&#8217;d be out of letters in the keyword, and so he&#8217;d reuse (part of) it to encrypt the second L with a key of 0 (i.e., A) again, and the O with a key of 1 (i.e., B) again. And so he&#8217;d write HELLO as HFNLP.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Encrypting HELLO with a keyword of ABC (reused cyclically as ABCAB) yields HFNLP.</caption>
 <colgroup>
 <col style="width: 16.6666%;">
@@ -705,7 +705,7 @@ ciphertext: Negh zf av huf pcfx bt gzrwep oz</code></pre>
 <p>at your prompt, where <code>k</code> is some keyword. Presumably you&#8217;ll want to paste your program&#8217;s output as input to our program; be sure, of course, to use the same key. Note that you do not need to implement <code>devigenere</code> yourself, only <code>vigenere</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="code-check50-code"><a class="link" href="#code-check50-code"><code>check50</code></a></h3>
+<h3 id="check50"><a class="link" href="#check50"><code>check50</code></a></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code>check50 cs50/2017/x/vigenere</code></pre>
@@ -715,7 +715,7 @@ ciphertext: Negh zf av huf pcfx bt gzrwep oz</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="staff-s-solution"><a class="link" href="#staff-s-solution">Staff&#8217;s Solution</a></h2>
+<h2 id="staffs-solution"><a class="link" href="#staffs-solution">Staff&#8217;s Solution</a></h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">

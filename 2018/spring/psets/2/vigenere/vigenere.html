@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#background">Background</a></li>
 <li><a href="#specification">Specification</a></li>
 <li><a href="#walkthrough">Walkthrough</a></li>
@@ -588,7 +588,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#style">Style</a></li>
 </ul>
 </li>
-<li><a href="#staff-s-solution">Staff&#8217;s Solution</a></li>
+<li><a href="#staffs-solution">Staff&#8217;s Solution</a></li>
 <li><a href="#hints">Hints</a></li>
 </ul>
                 </div>
@@ -596,7 +596,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Vigenère</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement a program that encrypts messages using Vigenère&#8217;s cipher, per the below.</p>
@@ -627,7 +627,7 @@ ciphertext: HFNLP</code></pre>
 <div class="paragraph">
 <p>In other words, if Vigenère himself wanted to say HELLO to someone confidentially, using a keyword of, say, ABC, he would encrypt the H with a key of 0 (i.e., A), the E with a key of 1 (i.e., B), and the first L with a key of 2 (i.e., C), at which point he&#8217;d be out of letters in the keyword, and so he&#8217;d reuse (part of) it to encrypt the second L with a key of 0 (i.e., A) again, and the O with a key of 1 (i.e., B) again. And so he&#8217;d write HELLO as HFNLP.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Encrypting HELLO with a keyword of ABC (reused cyclically as ABCAB) yields HFNLP.</caption>
 <colgroup>
 <col style="width: 16.6666%;">
@@ -782,7 +782,7 @@ ciphertext: Negh zf av huf pcfx bt gzrwep oz</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="staff-s-solution"><a class="link" href="#staff-s-solution">Staff&#8217;s Solution</a></h2>
+<h2 id="staffs-solution"><a class="link" href="#staffs-solution">Staff&#8217;s Solution</a></h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">

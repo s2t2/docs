@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -590,10 +590,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <ul class="sectlevel2">
 <li><a href="#understanding">Understanding</a>
 <ul class="sectlevel3">
-<li><a href="#code-dictionary-c-h-code"><code>dictionary.{c,h}</code></a></li>
-<li><a href="#code-makefile-code"><code>Makefile</code></a></li>
-<li><a href="#code-speller-c-code"><code>speller.c</code></a></li>
-<li><a href="#code-texts-code"><code>texts/</code></a></li>
+<li><a href="#dictionary-ch"><code>dictionary.{c,h}</code></a></li>
+<li><a href="#makefile"><code>Makefile</code></a></li>
+<li><a href="#speller-c"><code>speller.c</code></a></li>
+<li><a href="#texts"><code>texts/</code></a></li>
 </ul>
 </li>
 </ul>
@@ -612,9 +612,9 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 </div>
             </div>
             <div id="content">
-                <h1>Problem: Mispellings<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></h1>
+                <h1>Problem: Mispellings<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement a program that spell-checks a file, per the below.</p>
@@ -852,13 +852,13 @@ TIME IN TOTAL:</code></pre>
 <p>In <code>speller.c</code>, we&#8217;ve put together a program that&#8217;s designed to spell-check a file after loading a dictionary of words from disk into memory. Unfortunately, we didn&#8217;t quite get around to implementing the loading part. Or the checking part. Both (and a bit more) we leave to you! But first, a tour.</p>
 </div>
 <div class="sect3">
-<h4 id="code-dictionary-c-h-code"><a class="link" href="#code-dictionary-c-h-code"><code>dictionary.{c,h}</code></a></h4>
+<h4 id="dictionary-ch"><a class="link" href="#dictionary-ch"><code>dictionary.{c,h}</code></a></h4>
 <div class="paragraph">
 <p>Open up <code>dictionary.h</code>. Declared in that file are four functions; take note of what each should do. Now open up <code>dictionary.c</code>. Notice that we&#8217;ve implemented those four functions, but only barely, just enough for this code to compile. Your job, ultimately, is to re-implement those functions as cleverly as possible so that this spell checker works as advertised. And fast!</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-makefile-code"><a class="link" href="#code-makefile-code"><code>Makefile</code></a></h4>
+<h4 id="makefile"><a class="link" href="#makefile"><code>Makefile</code></a></h4>
 <div class="paragraph">
 <p>Recall that <code>make</code> automates compilation of your code so that you don&#8217;t have to execute <code>clang</code> manually along with a whole bunch of switches. However, as your programs grow in size, make won&#8217;t be able to infer from context anymore how to compile your code; you&#8217;ll need to start telling make how to compile your program, particularly when they involve multiple source (i.e., <code>.c</code>) files, as in the case of this problem. And so we&#8217;ll utilize a <code>Makefile</code>, a configuration file that tells make exactly what to do. Open up <code>Makefile</code>, and let&#8217;s take a tour of its lines.</p>
 </div>
@@ -981,7 +981,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-speller-c-code"><a class="link" href="#code-speller-c-code"><code>speller.c</code></a></h4>
+<h4 id="speller-c"><a class="link" href="#speller-c"><code>speller.c</code></a></h4>
 <div class="paragraph">
 <p>Okay, next open up <code>speller.c</code> and spend some time looking over the code and comments therein. You won&#8217;t need to change anything in this file, but you should understand it nonetheless. Notice how, by way of <code>getrusage</code>, we&#8217;ll be "benchmarking" (i.e., timing the execution of) your implementations of <code>check</code>, <code>load</code>, <code>size</code>, and <code>unload</code>. Also notice how we go about passing <code>check</code>, word by word, the contents of some file to be spell-checked. Ultimately, we report each misspelling in that file along with a bunch of statistics.</p>
 </div>
@@ -1028,7 +1028,7 @@ TIME IN TOTAL:</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="code-texts-code"><a class="link" href="#code-texts-code"><code>texts/</code></a></h4>
+<h4 id="texts"><a class="link" href="#texts"><code>texts/</code></a></h4>
 <div class="paragraph">
 <p>So that you can test your implementation of <code>speller</code>, we&#8217;ve also provided you with a whole bunch of texts, among them the script from <em>Austin Powers: International Man of Mystery</em>, a sound bite from Ralph Wiggum, three million bytes from Tolstoy, some excerpts from Machiavelli and Shakespeare, the entirety of the King James V Bible, and more. So that you know what to expect, open and skim each of those files, all of which are in a directory called <code>texts</code> within your <code>mispellings</code> directory.</p>
 </div>
@@ -1309,7 +1309,7 @@ Farbissina                                                      Farbissina</code
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. Hope you appreciate the irony.
 </div>
 </div>

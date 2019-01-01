@@ -528,7 +528,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#assessment">Assessment</a></li>
 <li><a href="#getting-ready">Getting Ready</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#g-report">(g)report</a></li>
+<li><a href="#greport">(g)report</a></li>
 <li><a href="#seek-and-find">Seek and Find</a>
 <ul class="sectlevel2">
 <li><a href="#main">main</a></li>
@@ -839,13 +839,13 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="g-report"><a class="link" href="#g-report">(g)report</a></h2>
+<h2 id="greport"><a class="link" href="#greport">(g)report</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We have seen a good number of terminal commmands so far in this course that have proved to be very useful. Some, like <code>cd</code>, <code>unzip</code>, <code>ls</code>, and <code>wget</code> we have used on nearly every single problem.</p>
 </div>
 <div class="paragraph">
-<p>There are a multitude of other terminal commands, however, with which you may still be unfamiliar but that, once known, can prove to be very useful as well. One of these is called <code>grep</code>.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>.</p>
+<p>There are a multitude of other terminal commands, however, with which you may still be unfamiliar but that, once known, can prove to be very useful as well. One of these is called <code>grep</code>.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p><code>grep</code> allows a user to search any given input files, selecting lines that match one or more string patterns given. For example, if you were to run</p>
@@ -884,7 +884,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>will print to the terminal a list of lines containing the string <code>foo</code> found in all files within <code>mydirectory</code>, including those files that might exist in subdirectories thereof. Thankfully, it also prints the name of the file containing the line, so you can easily find whatever it is you&#8217;re looking for.</p>
 </div>
 <div class="paragraph">
-<p>You can imagine scenarios in which <code>grep</code> comes in handy. Imagine having to look through thousands of files, and you can search through all of them for any particular string you&#8217;d like with one simple command. In fact, if a Mac OS user<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>, you may be familiar with a similar GUI tool called "Finder". In this example, we&#8217;re searching our entire <code>Dropbox</code> folder for the string "I took CS50":</p>
+<p>You can imagine scenarios in which <code>grep</code> comes in handy. Imagine having to look through thousands of files, and you can search through all of them for any particular string you&#8217;d like with one simple command. In fact, if a Mac OS user<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>, you may be familiar with a similar GUI tool called "Finder". In this example, we&#8217;re searching our entire <code>Dropbox</code> folder for the string "I took CS50":</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -991,7 +991,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>We first begin by simply initializing the values that will be used later on in the function. Note that <code>npaths</code> is set to 0, and the value of our pointer <code>paths</code> is set to <code>NULL</code>.</p>
 </li>
 <li>
-<p>The next piece of code involves a <em>system call</em>, <code>opendir</code>, defined in the library <code>dirent.h</code> we saw at the top of the program.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup> If the filepath contained in <code>dir.name</code> is valid, this function effectively opens that directory for reading, much like files are opened with the call <code>fopen</code> (remember that from Jason&#8217;s short? If not, it might be a good idea to go back and review!).</p>
+<p>The next piece of code involves a <em>system call</em>, <code>opendir</code>, defined in the library <code>dirent.h</code> we saw at the top of the program.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> If the filepath contained in <code>dir.name</code> is valid, this function effectively opens that directory for reading, much like files are opened with the call <code>fopen</code> (remember that from Jason&#8217;s short? If not, it might be a good idea to go back and review!).</p>
 <div class="paragraph">
 <p>The call <code>readdir</code> acts much like a call to either <code>fscanf</code> or <code>fgets</code>, and grabs each element in the directory one at a time. These directory entries contain the file names, types, and other information, as we would expect.</p>
 </div>
@@ -999,7 +999,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li>
 <p>The next section of this function checks whether or not the directory entry is a file or a directory, and updates the <code>path</code> structure <code>newPath</code> accordingly. The <code>name</code> field of <code>newPath</code> is set to the relative filepath, and the <code>type</code> field is set to either "file" or "directory".</p>
 <div class="paragraph">
-<p>Of note in this section as well are the function calls <code>realloc</code> and <code>calloc</code>, which are variations of a call named <code>malloc</code>. You will become very familiar with <code>malloc</code> later on in this course, but for now, understand that these calls explictly request and set aside for use some memory to hold the variables declared.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnote_4" title="View footnote.">4</a>]</sup> In the future, you will be expected to free all memory you have allocated. Feel free to type <code>man malloc</code>, <code>man realloc</code>, or <code>man free</code> into the terminal if curious for more information.</p>
+<p>Of note in this section as well are the function calls <code>realloc</code> and <code>calloc</code>, which are variations of a call named <code>malloc</code>. You will become very familiar with <code>malloc</code> later on in this course, but for now, understand that these calls explictly request and set aside for use some memory to hold the variables declared.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> In the future, you will be expected to free all memory you have allocated. Feel free to type <code>man malloc</code>, <code>man realloc</code>, or <code>man free</code> into the terminal if curious for more information.</p>
 </div>
 </li>
 <li>
@@ -1032,7 +1032,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>Copy the name of the file where you found the string into <code>found.txt</code>. You should additionally add a newline character at the end to ensure separation of each file name.</p>
 </div>
 <div class="paragraph">
-<p>Additionally, you will only want to write a file name into your outfile once, even if the string is found in multiple locations within that same file, so perhaps you can devise an easy way keep track of whether or not<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnote_5" title="View footnote.">5</a>]</sup> you&#8217;ve already output that file.</p>
+<p>Additionally, you will only want to write a file name into your outfile once, even if the string is found in multiple locations within that same file, so perhaps you can devise an easy way keep track of whether or not<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> you&#8217;ve already output that file.</p>
 </div>
 </li>
 <li>
@@ -1119,19 +1119,19 @@ submit50 2016/ap/finder</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. If curious, this is an acronym for the rather cumbersome "globally search for a regular expression and print"
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. This feature exists in Windows as well, and has become more prominent in more recent versions
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. You may recall that C was originally developed in the early 1970s alongside the operating system UNIX. Though its ability to directly manipulate the operating system like this is not used terribly frequently in CS50, it&#8217;s a very powerful tool when used correctly!
 </div>
-<div class="footnote" id="_footnote_4">
+<div class="footnote" id="_footnotedef_4">
 <a href="#_footnoteref_4">4</a>. Incidentally, when you do allocate memory explictly as we do here, you must later free the memory to avoid what are called <em>memory leaks</em>. For this problem, we will not require any explicit calls to <code>free</code> in your code, and therefore will be okay with your program suffering from memory leaks.
 </div>
-<div class="footnote" id="_footnote_5">
+<div class="footnote" id="_footnotedef_5">
 <a href="#_footnoteref_5">5</a>. Hmm&#8230;&#8203; only two options for this. Seems a bit like yes or no, on or off, <code>true</code> or <code>false</code> &#8230;&#8203;
 </div>
 </div>

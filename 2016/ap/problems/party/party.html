@@ -803,7 +803,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sect2">
 <h3 id="helpers-php"><a class="link" href="#helpers-php">helpers.php</a></h3>
 <div class="paragraph">
-<p>There&#8217;s actually even more good news than just the syntax similarity. Generating PDFs (which, of course, is the file format that CS50 Muppet wants for his birthday party invitations) is somewhat tricky, and delves into aspects of the language (such as <em>objects</em>) that we&#8217;re not quite ready to throw your way just yet<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>. While fortunately there exists a PHP library called <a href="http://www.fpdf.org/">FPDF</a> that we can use to generate PDFs, the functions themselves sometimes have confusing and/or distracting parameter lists.</p>
+<p>There&#8217;s actually even more good news than just the syntax similarity. Generating PDFs (which, of course, is the file format that CS50 Muppet wants for his birthday party invitations) is somewhat tricky, and delves into aspects of the language (such as <em>objects</em>) that we&#8217;re not quite ready to throw your way just yet<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. While fortunately there exists a PHP library called <a href="http://www.fpdf.org/">FPDF</a> that we can use to generate PDFs, the functions themselves sometimes have confusing and/or distracting parameter lists.</p>
 </div>
 <div class="paragraph">
 <p>So to that end, we&#8217;ve constructed an API that will give a feel similar to C to your first foray working with PHP to make the introduction just a bit more gentle. The functions that comprise that API can be found inside <code>helpers.php</code>; we&#8217;ll quickly run them down for you now, though you should also peek inside that file (but don&#8217;t edit it!) to see how the functions work.</p>
@@ -811,10 +811,10 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sect3">
 <h4 id="create_pdf"><a class="link" href="#create_pdf">create_pdf</a></h4>
 <div class="paragraph">
-<p>This function initializes<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup> a PDF object that we can then begin to work with.</p>
+<p>This function initializes<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> a PDF object that we can then begin to work with.</p>
 </div>
 <div class="paragraph">
-<p>But <code>create_pdf</code> does not itself actually save a file to your system. Similar to when you open up a file in, say, Microsoft Word, you could write an entire novel inside of <code>Document1</code>, but until and unless you save that file<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup> and (typically) give it a more permanent name, it&#8217;s transient. If you close the program without saving, and then reopen Word, <code>Document1</code> will be blank.</p>
+<p>But <code>create_pdf</code> does not itself actually save a file to your system. Similar to when you open up a file in, say, Microsoft Word, you could write an entire novel inside of <code>Document1</code>, but until and unless you save that file<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> and (typically) give it a more permanent name, it&#8217;s transient. If you close the program without saving, and then reopen Word, <code>Document1</code> will be blank.</p>
 </div>
 <div class="paragraph">
 <p>So <code>create_pdf</code> is just like opening a new file in a text editor. We can type and edit as much as we want (which is what many of the below functions do), but until we actually save that file to the system, its contents are ephemeral.</p>
@@ -829,7 +829,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <div class="sect3">
 <h4 id="save_as"><a class="link" href="#save_as">save_as</a></h4>
 <div class="paragraph">
-<p>This is the function that actually takes the PDF object that you&#8217;ve been building and saves it. By default, FPDF would actually try to open up the PDF object in a browser, but that&#8217;s not what we&#8217;re hoping for here. Instead, we want to save it to a file (that&#8217;s what the <code>F</code> parameter means in that function<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnote_4" title="View footnote.">4</a>]</sup> call to <code>Output</code> within <code>save_as</code>) so that we could open it using a system viewer later.</p>
+<p>This is the function that actually takes the PDF object that you&#8217;ve been building and saves it. By default, FPDF would actually try to open up the PDF object in a browser, but that&#8217;s not what we&#8217;re hoping for here. Instead, we want to save it to a file (that&#8217;s what the <code>F</code> parameter means in that function<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> call to <code>Output</code> within <code>save_as</code>) so that we could open it using a system viewer later.</p>
 </div>
 </div>
 <div class="sect3">
@@ -970,16 +970,16 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. We&#8217;ll wait until JavaScript before that!
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. In object-oriented programming parlance, we would typically term this a <em>constructor</em> but because we are "cheating" and using this API to avoid OOP, we won&#8217;t call it that now.
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. Let&#8217;s leave temporary system files and autorecover out of the discussion so the water doesn&#8217;t get too murky!
 </div>
-<div class="footnote" id="_footnote_4">
+<div class="footnote" id="_footnotedef_4">
 <a href="#_footnoteref_4">4</a>. Again, in object-oriented programming parlance, you&#8217;ll soon see that we would typically refer to this as a "method".
 </div>
 </div>

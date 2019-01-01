@@ -517,7 +517,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#recommended-reading">Recommended Reading</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
@@ -556,7 +556,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Sudoku</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement the game of Sudoku, per the below:</p>
@@ -786,7 +786,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="paragraph">
-<p>Lather, rinse, and repeat these sorts of tricks enough times, and (assuming no PEBKAC<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>) we&#8217;ll end up with the solution below.</p>
+<p>Lather, rinse, and repeat these sorts of tricks enough times, and (assuming no PEBKAC<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>) we&#8217;ll end up with the solution below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -837,7 +837,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>to figure out how many columns your terminal window has. When you stretch or shrink your window and it reports "80", you can press ctrl+C to quit.</p>
 </div>
 <div class="paragraph">
-<p>Anyway, why this foray into terminal size? It turns out that ncurses individually addresses each character in your terminal window by way of (y, x) coordinates<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>, whereby (0, 0) refers to your terminal window&#8217;s top-left corner, (0, 79) refers to your window&#8217;s top-right corner, (23, 0) refers to the bottom-left corner, and (23, 79) refers to the bottom-right corner.</p>
+<p>Anyway, why this foray into terminal size? It turns out that ncurses individually addresses each character in your terminal window by way of (y, x) coordinates<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>, whereby (0, 0) refers to your terminal window&#8217;s top-left corner, (0, 79) refers to your window&#8217;s top-right corner, (23, 0) refers to the bottom-left corner, and (23, 79) refers to the bottom-right corner.</p>
 </div>
 <div class="paragraph">
 <p>Even if your window boasts dimensions smaller or larger than these, the idea is the same. When it comes time to fill in a blank with respect to Sudoku, you&#8217;ll simply update the <code>char</code> at some (y, x) coordinate.</p>
@@ -873,7 +873,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="paragraph">
-<p>Not only does our skeleton support two levels of game play (n00b<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup> and l33t<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnote_4" title="View footnote.">4</a>]</sup>), it also comes with 1024 different boards for each level. Ultimately, if you&#8217;d like to play a pseudorandomly chosen n00b board, you&#8217;ll want to execute just:<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnote_5" title="View footnote.">5</a>]</sup></p>
+<p>Not only does our skeleton support two levels of game play (n00b<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> and l33t<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>), it also comes with 1024 different boards for each level. Ultimately, if you&#8217;d like to play a pseudorandomly chosen n00b board, you&#8217;ll want to execute just:<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -914,7 +914,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p><code>COLOR_GREEN</code></p>
 </li>
 <li>
-<p><code>COLOR_YELLOW</code> <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnote_6" title="View footnote.">6</a>]</sup></p>
+<p><code>COLOR_YELLOW</code> <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
 </li>
 <li>
 <p><code>COLOR_BLUE</code></p>
@@ -994,7 +994,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <p>Now peek at <code>draw_borders</code>. Mostly we want you to poke around here because it demonstrates how to use ncurses. Notice, for instance, that the function first determines your terminal window&#8217;s dimensions using a macro called <code>getmaxyx</code>, a function built-in to ncurses. It eventually uses those maxima to fill your window&#8217;s topmost and bottommost rows with color and instructions. Notice how the function enables color, specifically turning on the <code>COLOR_PAIR</code> attribute that we called <code>PAIR_BORDER</code> back in <code>sudoku.h</code>. It then proceeds to draw the game&#8217;s borders by moving, left to right, coordinate to coordinate, laying down blank spaces, and doing some other neat things (like centering your <code>TITLE</code> and <code>AUTHOR</code> in the top order and planting instructions at the bottom) before shutting color back off.</p>
 </div>
 <div class="paragraph">
-<p>Now take a look at <code>draw_grid</code>, which lays down the ASCII art representing our game board. Similarly does it first determine your window&#8217;s dimensions, then uses those values to determine coordinates for the grid&#8217;s top left corner<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnote_7" title="View footnote.">7</a>]</sup>. Rather then generate the grid character by character, this function instead lays down whole strings (using <code>mvaddstr</code>, another ncurses function) at once, repeatedly inside of a <code>for</code> loop. Then it also reminds the user of the level and board they are playing, and so we constructed a string on the fly with <code>sprintf</code>, then added it to the screen with a final call to <code>mvaddstr</code>.</p>
+<p>Now take a look at <code>draw_grid</code>, which lays down the ASCII art representing our game board. Similarly does it first determine your window&#8217;s dimensions, then uses those values to determine coordinates for the grid&#8217;s top left corner<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>. Rather then generate the grid character by character, this function instead lays down whole strings (using <code>mvaddstr</code>, another ncurses function) at once, repeatedly inside of a <code>for</code> loop. Then it also reminds the user of the level and board they are playing, and so we constructed a string on the fly with <code>sprintf</code>, then added it to the screen with a final call to <code>mvaddstr</code>.</p>
 </div>
 <div class="paragraph">
 <p>Incidentally, we&#8217;ve mentioned a few of them now, but if curious to learn more about all these ncurses functions, <code>man</code> is your friend.</p>
@@ -1083,7 +1083,7 @@ More than any other problem to date, this problem is about design. Do give some 
 <p>Enable the user to replace any blank with a number by moving his or her cursor over that blank and then hitting a number from 1 to 9.</p>
 </li>
 <li>
-<p>Enable the user to change a number that they already inputted back to a blank by hitting any of 0, a period, <code>KEY_BACKSPACE</code>, or <code>KEY_DC</code> or to some other number from 1 to 9 by hitting that number.<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnote_8" title="View footnote.">8</a>]</sup> You needn&#8217;t (yet) prevent the user from altering numbers that "came with" the board.</p>
+<p>Enable the user to change a number that they already inputted back to a blank by hitting any of 0, a period, <code>KEY_BACKSPACE</code>, or <code>KEY_DC</code> or to some other number from 1 to 9 by hitting that number.<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> You needn&#8217;t (yet) prevent the user from altering numbers that "came with" the board.</p>
 </li>
 </ul>
 </div>
@@ -1229,28 +1229,28 @@ submit50 cs50/2018/ap/sudoku</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. <a href="http://www.urbandictionary.com/define.php?term=pebkac" class="bare">http://www.urbandictionary.com/define.php?term=pebkac</a>
 </div>
-<div class="footnote" id="_footnote_2">
+<div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. Yes, annoyingly, (y, x) coordinates and not the typical (x, y) coordinates.
 </div>
-<div class="footnote" id="_footnote_3">
+<div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. <a href="http://en.wikipedia.org/wiki/Newbie" class="bare">http://en.wikipedia.org/wiki/Newbie</a>
 </div>
-<div class="footnote" id="_footnote_4">
+<div class="footnote" id="_footnotedef_4">
 <a href="#_footnoteref_4">4</a>. <a href="http://en.wikipedia.org/wiki/Leet" class="bare">http://en.wikipedia.org/wiki/Leet</a>
 </div>
-<div class="footnote" id="_footnote_5">
+<div class="footnote" id="_footnotedef_5">
 <a href="#_footnoteref_5">5</a>. Those are two zeroes in <code>n00b</code>.
 </div>
-<div class="footnote" id="_footnote_6">
+<div class="footnote" id="_footnotedef_6">
 <a href="#_footnoteref_6">6</a>. Which, for whatever reason, doesn&#8217;t always look yellow.
 </div>
-<div class="footnote" id="_footnote_7">
+<div class="footnote" id="_footnotedef_7">
 <a href="#_footnoteref_7">7</a>. We decided that we wanted the grid roughly in the middle of your window but slightly to the left, and so we came up with those formulas by trial and error.
 </div>
-<div class="footnote" id="_footnote_8">
+<div class="footnote" id="_footnotedef_8">
 <a href="#_footnoteref_8">8</a>. Know that <code>KEY_BACKSPACE</code> and <code>KEY_DC</code> generally map to a keyboard&#8217;s Backspace and Delete keys, respectively, if they&#8217;re actually present. Don&#8217;t worry if your own Backspace and/or Delete keys don&#8217;t seem to work, even though you&#8217;re listening for <code>KEY_BACKSPACE</code> and <code>KEY_DC</code>; some keyboards send different codes altogether.
 </div>
 </div>

@@ -526,7 +526,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </ul>
 </li>
 <li><a href="#assessment">Assessment</a></li>
-<li><a href="#passwords-em-et-cetera-em">Passwords <em>Et Cetera</em></a></li>
+<li><a href="#passwords-et-cetera">Passwords <em>Et Cetera</em></a></li>
 </ul>
                 </div>
             </div>
@@ -710,7 +710,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 </div>
 </div>
 <div class="sect1">
-<h2 id="passwords-em-et-cetera-em"><a class="link" href="#passwords-em-et-cetera-em">Passwords <em>Et Cetera</em></a></h2>
+<h2 id="passwords-et-cetera"><a class="link" href="#passwords-et-cetera">Passwords <em>Et Cetera</em></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>On most, if not all, systems running Linux or UNIX is a file called <code>/etc/passwd</code>. By design, this file is meant to contain usernames and passwords, along with other account-related details (e.g., paths to users' home directories and shells). Also by (poor) design, this file is typically world-readable. Thankfully, the passwords therein aren&#8217;t stored "in the clear" but are instead encrypted using a "one-way hash function."  When a user logs into these systems by typing a username and password, the latter is encrypted with the very same hash function, and the result is compared against the username&#8217;s entry in <code>/etc/passwd</code>. If the two ciphertexts match, the user is allowed in. If you&#8217;ve ever forgotten some password, you may have been told that "I can&#8217;t look up your password, but I can change it for you."  It could be that person doesn&#8217;t know how. But, odds are they just can&#8217;t if a one-way hash function&#8217;s involved.</p>

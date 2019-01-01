@@ -577,7 +577,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
                 <div class="toc2" id="toc">
                     <div id="toctitle">Table of Contents</div>
                     <ul class="sectlevel1">
-<li><a href="#tl-dr">tl;dr</a></li>
+<li><a href="#tldr">tl;dr</a></li>
 <li><a href="#academic-honesty">Academic Honesty</a>
 <ul class="sectlevel2">
 <li><a href="#reasonable">Reasonable</a></li>
@@ -589,8 +589,8 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <li><a href="#object-orienting">Object Orienting</a></li>
 <li><a href="#the-race-begins">The Race Begins</a>
 <ul class="sectlevel2">
-<li><a href="#code-check_flag-code"><code>check_flag</code></a></li>
-<li><a href="#code-bubble-code-code-selection-code-and-code-insertion-code"><code>bubble</code>, <code>selection</code>, and <code>insertion</code></a></li>
+<li><a href="#check_flag"><code>check_flag</code></a></li>
+<li><a href="#bubble-selection-and-insertion"><code>bubble</code>, <code>selection</code>, and <code>insertion</code></a></li>
 </ul>
 </li>
 <li><a href="#showcase">Showcase</a></li>
@@ -614,7 +614,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
             <div id="content">
                 <h1>Problem: Sort Race</h1>
 <div class="sect1">
-<h2 id="tl-dr"><a class="link" href="#tl-dr">tl;dr</a></h2>
+<h2 id="tldr"><a class="link" href="#tldr">tl;dr</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Implement several <em>O(n<sup>2</sup>)</em> sorting algorithms so that they can be compared under various conditions.</p>
@@ -911,7 +911,7 @@ SRCS = race.o helpers.c</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>you&#8217;ll actually default to using the standard <code>Makefile</code> included with CS50 IDE<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup> which will just try to compile the <code>helpers.c</code> file alone into its own program. Problem is, if you open up <code>helpers.c</code>, there&#8217;s no <code>main</code> function, so you&#8217;ll probably get a whole bunch of cryptic error messages concluding with one along these lines:</p>
+<p>you&#8217;ll actually default to using the standard <code>Makefile</code> included with CS50 IDE<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> which will just try to compile the <code>helpers.c</code> file alone into its own program. Problem is, if you open up <code>helpers.c</code>, there&#8217;s no <code>main</code> function, so you&#8217;ll probably get a whole bunch of cryptic error messages concluding with one along these lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -947,7 +947,7 @@ SRCS = race.o helpers.c</code></pre>
 <p>All of the work you&#8217;ll be doing in this problem will be confined to <code>helpers.c</code> and possibly <code>helpers.h</code>. In particular, you have to implement the four functions prototyped therein: <code>check_flag</code>, <code>bubble</code>, <code>selection</code>, and <code>insertion</code>.</p>
 </div>
 <div class="sect2">
-<h3 id="code-check_flag-code"><a class="link" href="#code-check_flag-code"><code>check_flag</code></a></h3>
+<h3 id="check_flag"><a class="link" href="#check_flag"><code>check_flag</code></a></h3>
 <div class="paragraph">
 <p>If you try to compile <code>race</code> from the distro and run it without any command line arguments, you&#8217;re immediately notified of the proper usage of the program.</p>
 </div>
@@ -1005,7 +1005,7 @@ SRCS = race.o helpers.c</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-bubble-code-code-selection-code-and-code-insertion-code"><a class="link" href="#code-bubble-code-code-selection-code-and-code-insertion-code"><code>bubble</code>, <code>selection</code>, and <code>insertion</code></a></h3>
+<h3 id="bubble-selection-and-insertion"><a class="link" href="#bubble-selection-and-insertion"><code>bubble</code>, <code>selection</code>, and <code>insertion</code></a></h3>
 <div class="paragraph">
 <p>In the functions <code>bubble</code>, <code>selection</code>, and <code>insertion</code> you will be implementing, respectively, bubble sort, selection sort, and insertion sort. Remember that you are not allowed to modify the prototypes of <code>bubble</code>, <code>selection</code>, or <code>insertion</code>, but you are welcome to create any additional "helper" functions that you wish, placing their prototypes in <code>helpers.h</code> and their definitions in <code>helpers.c</code>.</p>
 </div>
@@ -1183,7 +1183,7 @@ submit50 cs50/2018/ap/race</code></pre>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnote_1">
+<div class="footnote" id="_footnotedef_1">
 <a href="#_footnoteref_1">1</a>. The existence of this file is why your previous programs compiled with no trouble despite not having a <code>Makefile</code> in the directory.
 </div>
 </div>
